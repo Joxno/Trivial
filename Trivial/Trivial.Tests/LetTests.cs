@@ -18,9 +18,9 @@ namespace Trivial.Tests
         {
             Let(1, 2, (a, b) =>
             {
-                Let(a, b, (a, b) =>
+                return Let(a, b, (a, b) =>
                 {
-                    
+                    return a + b;
                 });
             });
         }

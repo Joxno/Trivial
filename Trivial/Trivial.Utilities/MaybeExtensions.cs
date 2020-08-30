@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,5 +32,19 @@ namespace Trivial.Utilities
         public static Maybe<T3> SelectMany<T, T2, T3>(this Maybe<T> M, Func<T, Maybe<T2>> Func, Func<T, T2, T3> S) =>
             M.Bind(X => Func(X).Bind(Y => Maybe.Return(S(X, Y))));
 
+        public static Maybe<IEnumerable<T>> Raise<T>(this IEnumerable<Maybe<T>> Enumerable) =>
+            Enumerable.All(M => M.HasValue)
+                    ? new Maybe<IEnumerable<T>>(Enumerable.Select(M => M.Value))
+                    : Maybe.Null;
+
+        public static Maybe<List<T>> Raise<T>(this List<Maybe<T>> Enumerable) =>
+            Enumerable.All(M => M.HasValue)
+                    ? new Maybe<List<T>>(Enumerable.Select(M => M.Value).ToList())
+                    : Maybe.Null;
+
+        public static Maybe<ImmutableList<T>> Raise<T>(this ImmutableList<Maybe<T>> Enumerable) =>
+            Enumerable.All(M => M.HasValue)
+                    ? new Maybe<ImmutableList<T>>(Enumerable.Select(M => M.Value).ToImmutableList())
+                    : Maybe.Null;
     }
 }
