@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
 using System.Text.Json;
 using Trivial.Helpful;
@@ -8,6 +9,7 @@ using Trivial.TextAdventure.DTO;
 using Trivial.TextAdventure.Interfaces;
 using Trivial.Utilities;
 using static Trivial.Helpful.Def;
+using static Trivial.Helpful.Function;
 
 namespace Trivial.TextAdventure.Loaders
 {
@@ -17,7 +19,14 @@ namespace Trivial.TextAdventure.Loaders
             (Json) =>
                 Try.From(_Deserialize.Apply(Json))
                 .Bind(_Extract);
-            
+
+        public Func<FilePath, Maybe<(ImmutableList<CommandPattern>, ImmutableList<Pattern>)>> LoadFromFile =>
+            (Path) =>
+                Try.From(() => File.ReadAllText(Path.Path))
+                .Select(S => new JSON(S))
+                .Bind(LoadFromJson);
+                
+
         private Func<JSON, CommandPatternsDTO> _Deserialize =>
             (Json) =>
                 JsonSerializer.Deserialize<CommandPatternsDTO>(Json.Text);

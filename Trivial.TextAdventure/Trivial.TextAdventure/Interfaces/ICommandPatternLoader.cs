@@ -12,5 +12,6 @@ namespace Trivial.TextAdventure.Interfaces
     public interface ICommandPatternLoader
     {
         public Func<JSON, Maybe<(ImmutableList<CommandPattern>, ImmutableList<Pattern>)>> LoadFromJson { get; }
+        public Func<FilePath, Maybe<(ImmutableList<CommandPattern>, ImmutableList<Pattern>)>> LoadFromFile { get; }
     }
 }

@@ -18,8 +18,18 @@ namespace Trivial.TextAdventure.Tests
         public void LoadPatternsFromJSON()
         {
             var t_Loader = new CommandPatternLoader();
-
             var t_Patterns = t_Loader.LoadFromJson(_GetJSON());
+
+            t_Patterns.HasValue.Should().BeTrue();
+            t_Patterns.Value.Item1.Should().HaveCountGreaterThan(0);
+            t_Patterns.Value.Item2.Should().HaveCountGreaterThan(0);
+        }
+
+        [Test]
+        public void LoadPatternsFromFile()
+        {
+            var t_Loader = new CommandPatternLoader();
+            var t_Patterns = t_Loader.LoadFromFile(new FilePath("./Resources/CommandPattern.json.txt"));
 
             t_Patterns.HasValue.Should().BeTrue();
             t_Patterns.Value.Item1.Should().HaveCountGreaterThan(0);
@@ -31,6 +41,15 @@ namespace Trivial.TextAdventure.Tests
         {
             var t_Loader = new CommandPatternLoader();
             var t_Patterns = t_Loader.LoadFromJson(new JSON(""));
+
+            t_Patterns.HasValue.Should().BeFalse();
+        }
+
+        [Test]
+        public void LoadPatternsFromInvalidFile()
+        {
+            var t_Loader = new CommandPatternLoader();
+            var t_Patterns = t_Loader.LoadFromFile(new FilePath("./DoesntExist.json"));
 
             t_Patterns.HasValue.Should().BeFalse();
         }
