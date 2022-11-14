@@ -2,11 +2,8 @@
 
 namespace Trivial.Helpful;
 
-public static class Def
+public static partial class Functions
 {
-    public static Func<T> Fn<T>(T Value) => () => Value;
-    public static Func<T> Fn<T>(Func<T> F) => () => F();
-
     public static Func<TR> Let<T, TR>(T Val, Func<T, TR> Scope) => 
         Scope.Apply(Val);
     public static Func<TR> Let<T1, T2, TR>(T1 V1, T2 V2, Func<T1, T2, TR> Scope) => 

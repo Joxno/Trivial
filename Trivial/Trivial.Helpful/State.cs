@@ -1,5 +1,5 @@
 ﻿using System;
-using static Trivial.Helpful.Def;
+using static Trivial.Helpful.Functions;
 using static Trivial.Helpful.Function;
 using static Trivial.Helpful.Functions;
 

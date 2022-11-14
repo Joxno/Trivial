@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Trivial.Helpful.Def;
+using static Trivial.Helpful.Functions;
 
 namespace Trivial.Tests
 {
