@@ -7,4 +7,9 @@ using System.Threading.Tasks;
 namespace Trivial.Helpful
 {
     public record Unit;
+
+    public static partial class Defaults
+    {
+        public static Unit Unit => new Unit();
+    }
 }
