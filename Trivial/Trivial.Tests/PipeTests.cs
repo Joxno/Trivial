@@ -1,7 +1,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 using System;
-using Trivial.Helpful;
+using Trivial.Functional;
 
 namespace Trivial.Tests
 {

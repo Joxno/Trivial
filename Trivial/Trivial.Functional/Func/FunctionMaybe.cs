@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Trivial.Helpful.Func;
+namespace Trivial.Functional.Func;
 
 public static class FunctionMaybe
 {

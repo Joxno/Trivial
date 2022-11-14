@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Trivial.Helpful;
+namespace Trivial.Functional;
 
 public static class CurryExtensions
 {

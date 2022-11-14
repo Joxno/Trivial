@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trivial.Helpful.Experimental
+namespace Trivial.Functional.Experimental
 {
     public interface HigherKind<T>
     {

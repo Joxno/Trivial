@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Trivial.Helpful;
+using Trivial.Functional;
 
-namespace Trivial.Helpful.Experimental
+namespace Trivial.Functional.Experimental
 { 
     
     public interface IMonad<T, TM>
     {
         public IMonad<T2, TM> Return<T2>(T2 Value);
         public IMonad<T2, TM> Bind<T2>(Func<T, IMonad<T2, TM>> Func);
-        public IMonad<T2, TM> Bind<T2>(Func<IMonad<T2, TM>> Func) => Bind(Function.Pipe(Helpful.Functions.Identity<T>(), () => Func()));
+        public IMonad<T2, TM> Bind<T2>(Func<IMonad<T2, TM>> Func) => Bind(Function.Pipe(Functional.Functions.Identity<T>(), () => Func()));
         public IMonad<T2, TM> Map<T2>(Func<T, T2> Func) => Bind((P) => Return(Func(P)));
         public void Then(Action<T> Func);
     }

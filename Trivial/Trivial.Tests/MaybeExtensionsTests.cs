@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
-using Trivial.Helpful;
+using Trivial.Functional;
 using Trivial.Utilities;
 using FluentAssertions;
 using System.Runtime.CompilerServices;

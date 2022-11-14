@@ -1,4 +1,4 @@
-﻿namespace Trivial.Helpful;
+﻿namespace Trivial.Functional;
 
 public record Cons;
 public record Cons<T, T2>(T Left, T2 Right) : Cons;

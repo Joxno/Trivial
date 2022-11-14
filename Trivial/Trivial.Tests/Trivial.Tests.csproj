@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Trivial.Helpful\Trivial.Helpful.csproj" />
+    <ProjectReference Include="..\Trivial.Functional\Trivial.Functional.csproj" />
     <ProjectReference Include="..\Trivial.Utilities\Trivial.Utilities.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,4 @@
-﻿namespace Trivial.Helpful;
+﻿namespace Trivial.Functional;
 
 public record struct Unit;
 

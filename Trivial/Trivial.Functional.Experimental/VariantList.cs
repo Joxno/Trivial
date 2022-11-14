@@ -1,7 +1,7 @@
 ﻿using System;
-using static Trivial.Helpful.Functions;
+using static Trivial.Functional.Functions;
 
-namespace Trivial.Helpful.Experimental;
+namespace Trivial.Functional.Experimental;
 
 public class VariantList
 {
@@ -28,7 +28,7 @@ public class VariantList
         Functions.Cons(Func(L.m_InternalList.Left).m_InternalList.Left, L.m_InternalList.EraseType());
 
     public static VariantList Bind(VariantList L, Func<VariantList> Func) =>
-        Bind(L, Function.Pipe(Helpful.Functions.Identity<object>(), () => Func()));
+        Bind(L, Function.Pipe(Functional.Functions.Identity<object>(), () => Func()));
 
     public VariantList Bind(Func<object, VariantList> Func) =>
         Bind(this, Func);

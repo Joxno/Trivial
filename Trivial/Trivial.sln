@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30317.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivial.Helpful", "Trivial.Helpful\Trivial.Helpful.csproj", "{6D7F6A4D-E6D0-488A-94CD-C7A5088C290C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivial.Functional", "Trivial.Functional\Trivial.Functional.csproj", "{6D7F6A4D-E6D0-488A-94CD-C7A5088C290C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivial.Utilities", "Trivial.Utilities\Trivial.Utilities.csproj", "{3CCBC253-65FF-41B2-8C41-51211E9A1CE2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivial.Tests", "Trivial.Tests\Trivial.Tests.csproj", "{668234C5-521D-4E44-ABEC-F2A29F36C796}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivial.Helpful.Experimental", "Trivial.Helpful.Experimental\Trivial.Helpful.Experimental.csproj", "{F9FE25F0-DC89-4CB3-879A-2ECDABB0A1A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trivial.Functional.Experimental", "Trivial.Functional.Experimental\Trivial.Functional.Experimental.csproj", "{F9FE25F0-DC89-4CB3-879A-2ECDABB0A1A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

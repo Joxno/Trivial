@@ -1,9 +1,9 @@
 ﻿using System;
-using static Trivial.Helpful.Functions;
-using static Trivial.Helpful.Function;
-using static Trivial.Helpful.Functions;
+using static Trivial.Functional.Functions;
+using static Trivial.Functional.Function;
+using static Trivial.Functional.Functions;
 
-namespace Trivial.Helpful;
+namespace Trivial.Functional;
 
 public class State<TS> : State<TS, Unit>
 {

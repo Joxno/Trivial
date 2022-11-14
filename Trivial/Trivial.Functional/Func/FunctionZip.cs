@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Trivial.Helpful.Func;
+namespace Trivial.Functional.Func;
 
 public static class FunctionZip
 {

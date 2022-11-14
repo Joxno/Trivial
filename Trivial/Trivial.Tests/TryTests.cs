@@ -3,7 +3,7 @@ using NUnit.Framework;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
-using Trivial.Helpful;
+using Trivial.Functional;
 using Trivial.Utilities;
 
 namespace Trivial.Tests
