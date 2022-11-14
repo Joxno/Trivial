@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Trivial.Helpful;
 
-namespace Trivial.Helpful
+public record struct Unit;
+
+public static partial class Defaults
 {
-    public record Unit;
-
-    public static partial class Defaults
-    {
-        public static Unit Unit => new Unit();
-    }
+    public static Unit Unit => new Unit();
 }
