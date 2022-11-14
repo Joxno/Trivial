@@ -158,6 +158,19 @@ namespace Trivial.Tests
             t_List[2].Should().Be(6);
         }
 
+        [Test]
+        public void MaybeWithSwitchExpression()
+        {
+            Maybe<int> t_Maybe = null;
+
+            bool t_isNull = t_Maybe.HasValue switch {
+                true => false,
+                false => true,
+            };
+
+            t_isNull.Should().BeTrue();
+        }
+
         private Maybe<int> _IntToMaybeInt(int i) => i;
 
         private Maybe<IDummy> _CreateOrFailDummyExpr(int i) =>
