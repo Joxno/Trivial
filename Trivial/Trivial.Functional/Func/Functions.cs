@@ -20,7 +20,7 @@ public static partial class Functions
         Str => decimal.Parse(Str);
 
     public static Func<string, Unit> WriteToConsole() =>
-        Str => { Console.WriteLine(Str); return Function.Unit; };
+        Str => { Console.WriteLine(Str); return Defaults.Unit; };
 
     public static Func<object, string> ToString() =>
         P => P.ToString();
